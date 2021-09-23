@@ -115,7 +115,7 @@
 
     </LinearLayout>
 
-    <ImageButton
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/kakaoLoginBtn"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -126,7 +126,7 @@
         android:layout_marginBottom="50dp"
         android:layout_marginStart="50dp"/>
 
-    <ImageButton
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/naverLoginBtn"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -135,7 +135,7 @@
         app:layout_constraintStart_toEndOf="@+id/kakaoLoginBtn"
         app:layout_constraintBottom_toBottomOf="@id/kakaoLoginBtn" />
 
-    <ImageButton
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/facebookImgBtn"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -144,7 +144,7 @@
         app:layout_constraintStart_toEndOf="@+id/naverLoginBtn"
         app:layout_constraintBottom_toBottomOf="@id/naverLoginBtn" />
 
-    <ImageButton
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/googleLoginBtn"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -153,7 +153,7 @@
         app:layout_constraintStart_toEndOf="@+id/facebookImgBtn"
         app:layout_constraintBottom_toBottomOf="@id/facebookImgBtn" />
 
-    <ImageButton
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/appleLoginBtn"
         android:layout_width="40dp"
         android:layout_height="40dp"

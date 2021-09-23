@@ -14,6 +14,7 @@ class LoginActivity : BaseActivity() {
         setContentView(binding.root)
         setupEvents()
         setValues()
+
     }
 
     override fun setupEvents() {
