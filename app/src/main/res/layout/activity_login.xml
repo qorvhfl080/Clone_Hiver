@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+    <TextView
+        android:id="@+id/mainTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:text="안녕하세요 :)\n하이버입니다."
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="브랜디/하이버의 통합회원으로 로그인이 가능합니다."
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/mainTxt"
+        app:layout_constraintTop_toBottomOf="@id/mainTxt" />
+
+    <EditText
+        android:id="@+id/inputIdEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:hint="아이디 입력"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/mainTxt"
+        app:layout_constraintTop_toBottomOf="@id/subTxt" />
+
+    <EditText
+        android:id="@+id/inputPwEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호 입력"
+        app:layout_constraintEnd_toEndOf="@id/inputIdEdt"
+        app:layout_constraintStart_toStartOf="@id/inputIdEdt"
+        app:layout_constraintTop_toBottomOf="@id/inputIdEdt" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="로그인"
+        app:layout_constraintEnd_toEndOf="@id/inputPwEdt"
+        app:layout_constraintStart_toStartOf="@id/inputPwEdt"
+        app:layout_constraintTop_toBottomOf="@id/inputPwEdt" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  아이디 찾기  |"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  비밀번호 찾기  |"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  회원가입  "
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/kakaoLoginBtn"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/gray"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  SNS 계정으로 로그인  "/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/gray"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/kakaoLoginBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toStartOf="@+id/naverLoginBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="50dp"/>
+
+    <ImageButton
+        android:id="@+id/naverLoginBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toStartOf="@+id/facebookImgBtn"
+        app:layout_constraintStart_toEndOf="@+id/kakaoLoginBtn"
+        app:layout_constraintBottom_toBottomOf="@id/kakaoLoginBtn" />
+
+    <ImageButton
+        android:id="@+id/facebookImgBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toStartOf="@+id/googleLoginBtn"
+        app:layout_constraintStart_toEndOf="@+id/naverLoginBtn"
+        app:layout_constraintBottom_toBottomOf="@id/naverLoginBtn" />
+
+    <ImageButton
+        android:id="@+id/googleLoginBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toStartOf="@+id/appleLoginBtn"
+        app:layout_constraintStart_toEndOf="@+id/facebookImgBtn"
+        app:layout_constraintBottom_toBottomOf="@id/facebookImgBtn" />
+
+    <ImageButton
+        android:id="@+id/appleLoginBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/googleLoginBtn"
+        app:layout_constraintBottom_toBottomOf="@id/googleLoginBtn"
+        android:layout_marginEnd="50dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

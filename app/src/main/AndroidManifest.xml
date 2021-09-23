@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Clone_Hiver">
         <activity
+            android:name=".activity.LoginActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
