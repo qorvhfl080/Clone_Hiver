@@ -1,0 +1,47 @@
+package com.gecko.clone_hiver.web
+
+import android.content.Context
+import com.gecko.clone_hiver.utils.ContextUtil
+import okhttp3.Interceptor
+import okhttp3.OkHttpClient
+import retrofit2.Retrofit
+
+class ServerAPI {
+
+//    companion object {
+//        private val hostURL = "http://3.36.146.152"
+//
+//        private var retrofit: Retrofit? = null
+//
+//        fun getRetrofit(context: Context): Retrofit {
+//            if (retrofit == null) {
+//
+////                API 요청 발생 -> 인터셉트 -> 헤더 추가 -> API요청 이어감
+//                val interceptor = Interceptor {
+//                    with(it) {
+//
+//                        val newRequest = request().newBuilder()
+//                            .addHeader("X-Http-Token", ContextUtil.getToken(context))
+//                            .build()
+//
+//                        proceed(newRequest)
+//                    }
+//                }
+//
+//                val myClient = OkHttpClient.Builder().addInterceptor(interceptor).build()
+//
+//                val gson = GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create()
+//
+//                retrofit = Retrofit.Builder()
+//                    .baseUrl(hostURL)
+//                    .client(myClient)
+//                    .addConverterFactory(GsonConverterFactory.create(gson))
+//                    .build()
+//            }
+//
+//            return retrofit!!
+//        }
+//
+//    }
+
+}

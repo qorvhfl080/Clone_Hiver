@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.TodayFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/TodayViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/verticalLeftGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/verticalRightGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="20dp"/>
+
+            <TextView
+                android:id="@+id/hilightTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="금주의 하이라이트"
+                app:layout_constraintStart_toEndOf="@id/verticalLeftGuideline"
+                app:layout_constraintTop_toBottomOf="@id/TodayViewPager" />
+
+            <ImageButton
+                android:id="@+id/hilightBtn1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher_round"
+                app:layout_constraintStart_toEndOf="@id/verticalLeftGuideline"
+                app:layout_constraintEnd_toStartOf="@id/hilightBtn2"
+                app:layout_constraintTop_toBottomOf="@id/hilightTxt"/>
+
+            <ImageButton
+                android:id="@+id/hilightBtn2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher_round"
+                app:layout_constraintEnd_toStartOf="@id/verticalRightGuideline"
+                app:layout_constraintStart_toEndOf="@id/hilightBtn1"
+                app:layout_constraintTop_toBottomOf="@id/hilightTxt"/>
+
+            <ImageButton
+                android:id="@+id/hilightBtn3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher_round"
+                app:layout_constraintStart_toEndOf="@id/verticalLeftGuideline"
+                app:layout_constraintEnd_toStartOf="@id/hilightBtn4"
+                app:layout_constraintTop_toBottomOf="@id/hilightBtn1"/>
+
+            <ImageButton
+                android:id="@+id/hilightBtn4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher_round"
+                app:layout_constraintEnd_toStartOf="@id/verticalRightGuideline"
+                app:layout_constraintStart_toEndOf="@id/hilightBtn3"
+                app:layout_constraintTop_toBottomOf="@id/hilightBtn2"/>
+
+            <View
+                android:id="@+id/bar1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hilightBtn3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="멋있는 가을, 여기서 시작"
+                app:layout_constraintStart_toEndOf="@id/verticalLeftGuideline"
+                app:layout_constraintTop_toBottomOf="@id/bar1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
