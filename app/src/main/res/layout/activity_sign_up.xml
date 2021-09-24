@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#664400"
+    tools:context=".activity.SignUpActivity">
+
+    <ImageButton
+        android:id="@+id/xBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/small_x_icon"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <Button
+        android:id="@+id/signUpKakaoBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFF00"
+        android:text="카카오로 시작하기"
+        android:textColor="@color/black"
+        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"/>
+    
+    <LinearLayout
+        android:id="@+id/orLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="@id/signUpKakaoBtn"
+        app:layout_constraintEnd_toEndOf="@id/signUpKakaoBtn"
+        app:layout_constraintTop_toBottomOf="@id/signUpKakaoBtn"
+        android:layout_marginTop="20dp">
+        <View
+            android:layout_width="1dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@color/gray"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  또는  "
+            android:textColor="@color/white"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@color/gray"/>
+    </LinearLayout>
+    
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/signUpNaverBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="@id/signUpKakaoBtn"
+        app:layout_constraintEnd_toStartOf="@id/signUpFacebookBtn"
+        app:layout_constraintTop_toBottomOf="@id/orLayout"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/signUpFacebookBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toEndOf="@id/signUpNaverBtn"
+        app:layout_constraintEnd_toStartOf="@id/signUpGoogleBtn"
+        app:layout_constraintTop_toTopOf="@id/signUpNaverBtn"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/signUpGoogleBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toEndOf="@id/signUpFacebookBtn"
+        app:layout_constraintEnd_toStartOf="@id/signUpAppleBtn"
+        app:layout_constraintTop_toTopOf="@id/signUpNaverBtn"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/signUpAppleBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toEndOf="@id/signUpGoogleBtn"
+        app:layout_constraintEnd_toStartOf="@id/signUpEmailBtn"
+        app:layout_constraintTop_toTopOf="@id/signUpNaverBtn"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/signUpEmailBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toEndOf="@id/signUpAppleBtn"
+        app:layout_constraintEnd_toEndOf="@id/signUpKakaoBtn"
+        app:layout_constraintTop_toTopOf="@id/signUpNaverBtn"
+        android:layout_marginEnd="20dp"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계정 하나로 하이버, 브랜디, 마미 서비스를\n모두 이용할 수 있어요."
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signUpNaverBtn"
+        android:layout_marginTop="20dp"/>
+    
+    <TextView
+        android:id="@+id/toSignInBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이미 가입하셨나요? 로그인하기"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

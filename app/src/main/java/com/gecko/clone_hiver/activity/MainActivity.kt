@@ -1,5 +1,6 @@
 package com.gecko.clone_hiver.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.gecko.clone_hiver.R
@@ -26,9 +27,33 @@ class MainActivity : BaseActivity() {
 
     override fun setValues() {
 
+        setMainViewPager()
+
+        binding.mainBottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+//                R.id.home -> {supportFragmentManager.beginTransaction().replace(R.id.linearLayout , HomeFragment()).commitAllowingStateLoss()}
+//                R.id.aiRecommend -> {}
+//                R.id.category -> {}
+//                R.id.wishlist -> {}
+                R.id.user -> {
+                    val signUpIntent = Intent(mContext, SignUpActivity::class.java)
+                    startActivity(signUpIntent)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                else -> {return@setOnNavigationItemSelectedListener true}
+            }
+        }
+
+
+
+    }
+
+    fun setMainViewPager() {
         mainMenuViewPagerAdapter = MainMenuViewPagerAdapter(supportFragmentManager)
         binding.mainMenuViewPager.adapter = mainMenuViewPagerAdapter
         binding.mainMenuTabLayout.setupWithViewPager(binding.mainMenuViewPager)
-
     }
+
+
+
 }
