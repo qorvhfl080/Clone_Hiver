@@ -1,12 +1,14 @@
 package com.gecko.clone_hiver.adapters.recycler
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.gecko.clone_hiver.R
+import com.gecko.clone_hiver.activity.ViewProductDetailActivity
 import com.gecko.clone_hiver.databinding.ProductListItemBinding
 import com.gecko.clone_hiver.databinding.SaleProductListItemBinding
 import com.gecko.clone_hiver.datas.ProductData
@@ -17,7 +19,9 @@ class ProductAdapter(val mContext: Context, val mList: List<ProductData>) : Recy
         val binding = SaleProductListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ProductViewHolder(binding).apply {
             itemView.setOnClickListener {
-                Toast.makeText(mContext, "눌림", Toast.LENGTH_SHORT).show()
+                val toViewDetailIntent = Intent(mContext, ViewProductDetailActivity::class.java)
+                toViewDetailIntent.putExtra("product", mList[position])
+                mContext.startActivity(toViewDetailIntent)
             }
         }
     }
