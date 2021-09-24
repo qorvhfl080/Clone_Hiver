@@ -3,6 +3,7 @@ package com.gecko.clone_hiver.adapters.viewpager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.gecko.clone_hiver.fragments.BrandFragment
 import com.gecko.clone_hiver.fragments.TimeSaleragment
 import com.gecko.clone_hiver.fragments.TodayFragment
 
@@ -14,6 +15,7 @@ class MainMenuViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
         return when (position) {
             0 -> TodayFragment()
             2 -> TimeSaleragment()
+            4 -> BrandFragment()
             else -> TodayFragment()
         }
     }
