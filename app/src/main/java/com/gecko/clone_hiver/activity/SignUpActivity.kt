@@ -23,6 +23,26 @@ class SignUpActivity : BaseActivity() {
             finish()
         }
 
+        binding.signUpNaverBtn.setOnClickListener {
+
+        }
+
+        binding.signUpFacebookBtn.setOnClickListener {
+
+        }
+
+        binding.signUpGoogleBtn.setOnClickListener {
+
+        }
+
+        binding.signUpAppleBtn.setOnClickListener {
+
+        }
+
+        binding.signUpEmailBtn.setOnClickListener {
+            startActivity(Intent(mContext, SignUpEmailActivity::class.java))
+        }
+
         binding.toSignInBtn.setOnClickListener {
             startActivity(Intent(mContext, SignInActivity::class.java))
             finish()
