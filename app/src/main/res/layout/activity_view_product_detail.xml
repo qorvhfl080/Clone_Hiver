@@ -8,8 +8,9 @@
     tools:context=".activity.ViewProductDetailActivity">
 
     <ScrollView
+        android:id="@+id/mainScrollLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -135,15 +136,197 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <TextView
+                android:id="@+id/couponDownloadBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="쿠폰 다운로드"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:drawableRight="@drawable/download_icon"
+                android:background="@drawable/gray_box"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/finalPriceForecastLayout"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <View
+                android:id="@+id/bar1"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/couponDownloadBtn"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/deliveryChargeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="배송비"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bar1"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="하이버는 전상품 무료배송"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/deliveryChargeTxt"
+                app:layout_constraintTop_toBottomOf="@id/bar1"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"/>
+
+            <TextView
+                android:id="@+id/pointTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="적립금"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/deliveryChargeTxt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0원 (1% 적립)"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/pointTxt"
+                app:layout_constraintTop_toBottomOf="@id/deliveryChargeTxt"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"/>
+
+            <View
+                android:id="@+id/bar2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pointTxt"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/authenticationLayoutBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bar2"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="정품인증"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="하이버의 모든 상품은 100% 정품입니다."
+                    android:textColor="@color/black"/>
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/black"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/bar3"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:background="@color/gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/authenticationLayoutBtn"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/productDetailTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bar3"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/productDetailViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/productDetailTabLayout"/>
+
+            <View
+                android:id="@+id/bar4"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:background="@color/gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/productDetailViewPager"/>
+
+            <TextView
+                android:id="@+id/tagTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="태그"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bar4"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"/>
+
+            <View
+                android:id="@+id/bar5"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tagTxt"
+                android:layout_marginTop="15dp"/>
+
+            <FrameLayout
+                android:id="@+id/tagLayout"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bar5"/>
+
+            <View
+                android:id="@+id/bar6"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:background="@color/gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tagLayout"/>
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainScrollLayout"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
