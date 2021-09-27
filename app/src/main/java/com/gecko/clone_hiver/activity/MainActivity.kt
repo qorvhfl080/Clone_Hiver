@@ -3,6 +3,7 @@ package com.gecko.clone_hiver.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBar
 import com.gecko.clone_hiver.R
@@ -25,13 +26,6 @@ class MainActivity : BaseActivity() {
 
     override fun setupEvents() {
 
-    }
-
-    override fun setValues() {
-
-        setMainViewPager()
-        setActionBar()
-
         binding.mainBottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
 //                R.id.home -> {supportFragmentManager.beginTransaction().replace(R.id.linearLayout , HomeFragment()).commitAllowingStateLoss()}
@@ -47,8 +41,20 @@ class MainActivity : BaseActivity() {
             }
         }
 
+    }
+
+    override fun setValues() {
+
+        setMainViewPager()
+        setActionBar()
 
 
+    }
+
+    override fun setActionBar() {
+        actionBarTitleTxt.visibility = View.VISIBLE
+        actionBarSearchImg.visibility = View.VISIBLE
+        actionBarShoppingImg.visibility = View.VISIBLE
     }
 
     fun setMainViewPager() {
@@ -57,17 +63,6 @@ class MainActivity : BaseActivity() {
         binding.mainMenuTabLayout.setupWithViewPager(binding.mainMenuViewPager)
     }
 
-    fun setActionBar() {
 
-        val defActionBar =supportActionBar!!
-        defActionBar.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-        defActionBar.setCustomView(R.layout.custom_action_bar)
-
-        val toolbar = defActionBar.customView.parent as Toolbar
-        toolbar.setContentInsetsAbsolute(0, 0)
-
-
-
-    }
 
 }

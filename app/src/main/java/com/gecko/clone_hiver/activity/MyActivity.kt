@@ -2,6 +2,7 @@ package com.gecko.clone_hiver.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.gecko.clone_hiver.databinding.ActivityMyBinding
 
 class MyActivity : BaseActivity() {
@@ -22,5 +23,13 @@ class MyActivity : BaseActivity() {
 
     override fun setValues() {
 
+        setActionBar()
+
+    }
+
+    override fun setActionBar() {
+        actionBarProfileImg.visibility = View.VISIBLE
+        actionBarIdTxt.visibility = View.VISIBLE
+        actionBarSettingImg.visibility = View.VISIBLE
     }
 }
