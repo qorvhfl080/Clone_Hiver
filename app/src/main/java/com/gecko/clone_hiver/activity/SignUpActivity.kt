@@ -54,4 +54,7 @@ class SignUpActivity : BaseActivity() {
 
     }
 
+    override fun setActionBar() {
+
+    }
 }

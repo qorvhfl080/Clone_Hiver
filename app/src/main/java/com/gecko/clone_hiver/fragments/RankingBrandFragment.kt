@@ -6,11 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.gecko.clone_hiver.R
-import com.gecko.clone_hiver.databinding.FragmentRankingAllBinding
+import com.gecko.clone_hiver.databinding.FragmentRankingBrandBinding
 
-class RankingAllFragment : BaseFragment() {
 
-    lateinit var binding: FragmentRankingAllBinding
+class RankingBrandFragment : BaseFragment() {
+
+    lateinit var binding: FragmentRankingBrandBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +24,7 @@ class RankingAllFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentRankingAllBinding.inflate(inflater, container, false)
+        binding = FragmentRankingBrandBinding.inflate(inflater, container, false)
 
         return binding.root
     }

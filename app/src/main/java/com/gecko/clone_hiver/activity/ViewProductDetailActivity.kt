@@ -23,4 +23,9 @@ class ViewProductDetailActivity : BaseActivity() {
     override fun setValues() {
 
     }
+
+    override fun setActionBar() {
+
+    }
+
 }

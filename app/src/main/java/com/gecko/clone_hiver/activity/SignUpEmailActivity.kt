@@ -23,4 +23,8 @@ class SignUpEmailActivity : BaseActivity() {
     override fun setValues() {
 
     }
+
+    override fun setActionBar() {
+
+    }
 }

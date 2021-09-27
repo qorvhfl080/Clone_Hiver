@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.gecko.clone_hiver.fragments.RankingAllFragment
+import com.gecko.clone_hiver.fragments.RankingBrandFragment
 
 class RankingMenuViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
@@ -12,7 +13,7 @@ class RankingMenuViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> RankingAllFragment()
-//            1 -> RankingBrandFragment()
+            1 -> RankingBrandFragment()
 //            2 -> RankingShoppingMallFragment()
 //            3 -> RankingLuxaryFragment()
 //            4 -> RankingSportFragment()

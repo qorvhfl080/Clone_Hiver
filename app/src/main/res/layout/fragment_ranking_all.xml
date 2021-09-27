@@ -7,62 +7,69 @@
     android:layout_height="match_parent"
     tools:context=".fragments.RankingAllFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="랭킹순"
-            android:drawableEnd=""
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/info_icon"
+                android:text="랭킹순"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/monthBtn"
+                app:layout_constraintBottom_toBottomOf="@id/monthBtn"
+                android:layout_marginStart="10dp"/>
 
-        <TextView
-            android:id="@+id/dayBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="일간"
-            android:background="@drawable/select_box"
-            app:layout_constraintEnd_toStartOf="@id/weekBtn"
-            app:layout_constraintTop_toTopOf="@id/monthBtn"
-            android:padding="5dp"/>
+            <TextView
+                android:id="@+id/dayBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일간"
+                android:background="@drawable/select_box"
+                app:layout_constraintEnd_toStartOf="@id/weekBtn"
+                app:layout_constraintTop_toTopOf="@id/monthBtn"
+                android:padding="5dp"/>
 
-        <TextView
-            android:id="@+id/weekBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="주간"
-            android:background="@drawable/select_box"
-            app:layout_constraintEnd_toStartOf="@id/monthBtn"
-            app:layout_constraintTop_toTopOf="@id/monthBtn"
-            android:padding="5dp"/>
+            <TextView
+                android:id="@+id/weekBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주간"
+                android:background="@drawable/select_box"
+                app:layout_constraintEnd_toStartOf="@id/monthBtn"
+                app:layout_constraintTop_toTopOf="@id/monthBtn"
+                android:padding="5dp"/>
 
-        <TextView
-            android:id="@+id/monthBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="월간"
-            android:background="@drawable/select_box"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="10dp"
-            android:padding="5dp"/>
+            <TextView
+                android:id="@+id/monthBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="월간"
+                android:background="@drawable/select_box"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rankingAllRecyclerView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/monthBtn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_margin="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rankingAllRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/monthBtn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="10dp"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
 
 </FrameLayout>

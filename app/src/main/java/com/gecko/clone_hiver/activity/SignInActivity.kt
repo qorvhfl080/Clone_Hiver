@@ -24,4 +24,8 @@ class SignInActivity : BaseActivity() {
     override fun setValues() {
 
     }
+
+    override fun setActionBar() {
+
+    }
 }
