@@ -3,6 +3,8 @@ package com.gecko.clone_hiver.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toolbar
+import androidx.appcompat.app.ActionBar
 import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.adapters.viewpager.MainMenuViewPagerAdapter
 import com.gecko.clone_hiver.databinding.ActivityMainBinding
@@ -28,6 +30,7 @@ class MainActivity : BaseActivity() {
     override fun setValues() {
 
         setMainViewPager()
+        setActionBar()
 
         binding.mainBottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -54,6 +57,17 @@ class MainActivity : BaseActivity() {
         binding.mainMenuTabLayout.setupWithViewPager(binding.mainMenuViewPager)
     }
 
+    fun setActionBar() {
 
+        val defActionBar =supportActionBar!!
+        defActionBar.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+        defActionBar.setCustomView(R.layout.custom_action_bar)
+
+        val toolbar = defActionBar.customView.parent as Toolbar
+        toolbar.setContentInsetsAbsolute(0, 0)
+
+
+
+    }
 
 }
