@@ -13,4 +13,5 @@
     <color name="blue">#FF0000FF</color>
     <color name="sale_price">#D6A76D</color>
     <color name="final_price">#C9974D</color>
+    <color name="primary">#D3A164</color>
 </resources>

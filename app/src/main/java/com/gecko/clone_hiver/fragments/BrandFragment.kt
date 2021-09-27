@@ -14,6 +14,8 @@ import com.gecko.clone_hiver.datas.ProductData
 
 class BrandFragment : BaseFragment() {
 
+    lateinit var binding: FragmentBrandBinding
+
     val mSuareProductList = ArrayList<ProductData>()
 
     lateinit var mSuareProductAdapter: ProductAdapter
@@ -29,7 +31,7 @@ class BrandFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentBrandBinding.inflate(inflater, container, false)
+        binding = FragmentBrandBinding.inflate(inflater, container, false)
 
         mSuareProductAdapter = ProductAdapter(requireContext(), mSuareProductList)
         binding.suareRecyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
