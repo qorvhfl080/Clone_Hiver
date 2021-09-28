@@ -35,25 +35,22 @@ class MainActivity : BaseActivity() {
         setupEvents()
         setValues()
 
-        val database = Firebase.database
-        val myRef = database.getReference("User")
-
-        myRef.setValue("Hello World!")
-
-        myRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val value = snapshot.getValue<String>()
-                Log.d("db", "${value}")
-                for (i in snapshot.children) {
-                    val p: User = i.getValue(User::class.java) as User
-                    // arrayList에 추가
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Log.e("db", "Fail to read value", error.toException())
-            }
-        })
+//        val database = Firebase.database
+//        val myRef = database.getReference("User")
+//
+//        myRef.setValue("Hello World!")
+//
+//        myRef.addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                val value = snapshot.getValue<String>()
+//                Log.d("db", "${value}")
+//
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//                Log.e("db", "Fail to read value", error.toException())
+//            }
+//        })
 
     }
 

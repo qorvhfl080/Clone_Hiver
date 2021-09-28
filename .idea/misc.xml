@@ -8,6 +8,7 @@
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.121" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/drawable-v24/select_box.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/drawable/black_box.xml" value="0.1" />
+        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/drawable/black_ellipse.xml" value="0.1" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/drawable/ic_hiver_background.xml" value="0.121" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/drawable/ic_launcher_background.xml" value="0.121" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/activity_login.xml" value="0.32135416666666666" />
@@ -19,6 +20,7 @@
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/activity_sign_up.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/activity_sign_up_email.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/activity_view_product_detail.xml" value="0.32135416666666666" />
+        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/banner_list_item.xml" value="0.1962962962962963" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/custom_action_bar.xml" value="0.3101851851851852" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/fragment_benefit.xml" value="0.32395833333333335" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/fragment_brand.xml" value="0.2977777777777778" />
@@ -40,7 +42,7 @@
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/fragment_sport.xml" value="0.32395833333333335" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/fragment_time_sale.xml" value="0.2490740740740741" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/fragment_time_saleragment.xml" value="0.32135416666666666" />
-        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/fragment_today.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/fragment_today.xml" value="0.2977777777777778" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/product_list_item.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/layout/sale_product_list_item.xml" value="0.2490740740740741" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/Clone_Hiver/app/src/main/res/menu/bottom_navigation.xml" value="0.2657407407407407" />

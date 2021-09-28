@@ -68,6 +68,10 @@ abstract class BaseActivity : AppCompatActivity() {
         actionBarProfileImg = defActionBar.customView.findViewById(R.id.actionProfileImg)
         actionBarLayout = defActionBar.customView.findViewById(R.id.actionBarLayout)
 
+        actionBarBackImg.setOnClickListener {
+            finish()
+        }
+
     }
 
 }

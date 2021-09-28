@@ -4,6 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.gecko.clone_hiver.databinding.ActivitySignUpEmailBinding
+import com.gecko.clone_hiver.datas.User
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -13,6 +18,7 @@ class SignUpEmailActivity : BaseActivity() {
 
     var allChecked: Boolean = true
 
+    lateinit var database: DatabaseReference
     val db = Firebase.database
     val userRef = db.getReference("User")
 
@@ -55,6 +61,12 @@ class SignUpEmailActivity : BaseActivity() {
             var phone = binding.phoneFirstEdt.text.toString()
             phone += binding.phoneSecondEdt.text.toString()
             phone += binding.phoneThirdEdt.text.toString()
+
+            val user = User(id, pw, email, phone)
+
+            database = Firebase.database.reference
+            database.child("User").setValue(user)
+
 
         }
 

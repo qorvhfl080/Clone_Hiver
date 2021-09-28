@@ -13,13 +13,53 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/TodayViewPager"
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/TodayBannerViewPager"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/black_ellipse"
+                app:layout_constraintVertical_bias="0.9"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintTop_toTopOf="@id/TodayBannerViewPager"
+                app:layout_constraintBottom_toBottomOf="@id/TodayBannerViewPager"
+                app:layout_constraintStart_toStartOf="@id/TodayBannerViewPager"
+                app:layout_constraintEnd_toEndOf="@id/TodayBannerViewPager"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/countThisBannerTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/countMaxBannerTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/verticalLeftGuideline"
@@ -40,52 +80,61 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="금주의 하이라이트"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/verticalLeftGuideline"
-                app:layout_constraintTop_toBottomOf="@id/TodayViewPager" />
+                app:layout_constraintTop_toBottomOf="@id/TodayBannerViewPager" />
 
             <ImageButton
                 android:id="@+id/hilightBtn1"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="140dp"
                 android:src="@drawable/highlight_1"
                 android:scaleType="centerInside"
                 android:background="@android:color/transparent"
                 app:layout_constraintStart_toEndOf="@id/verticalLeftGuideline"
                 app:layout_constraintEnd_toStartOf="@id/hilightBtn2"
-                app:layout_constraintTop_toBottomOf="@id/hilightTxt"/>
+                app:layout_constraintTop_toBottomOf="@id/hilightTxt"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="10dp"/>
 
             <ImageButton
                 android:id="@+id/hilightBtn2"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="140dp"
                 android:src="@drawable/highlight_2"
                 android:scaleType="centerInside"
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toStartOf="@id/verticalRightGuideline"
                 app:layout_constraintStart_toEndOf="@id/hilightBtn1"
-                app:layout_constraintTop_toBottomOf="@id/hilightTxt"/>
+                app:layout_constraintTop_toBottomOf="@id/hilightTxt"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"/>
 
             <ImageButton
                 android:id="@+id/hilightBtn3"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="140dp"
                 android:src="@drawable/highlight_3"
                 android:scaleType="centerInside"
                 android:background="@android:color/transparent"
                 app:layout_constraintStart_toEndOf="@id/verticalLeftGuideline"
                 app:layout_constraintEnd_toStartOf="@id/hilightBtn4"
-                app:layout_constraintTop_toBottomOf="@id/hilightBtn1"/>
+                app:layout_constraintTop_toBottomOf="@id/hilightBtn1"
+                android:layout_marginEnd="5dp"/>
 
             <ImageButton
                 android:id="@+id/hilightBtn4"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="140dp"
                 android:src="@drawable/highlight_4"
                 android:scaleType="centerInside"
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toStartOf="@id/verticalRightGuideline"
                 app:layout_constraintStart_toEndOf="@id/hilightBtn3"
-                app:layout_constraintTop_toBottomOf="@id/hilightBtn2"/>
+                app:layout_constraintTop_toBottomOf="@id/hilightBtn2"
+                android:layout_marginStart="5dp"/>
 
             <View
                 android:id="@+id/bar1"
@@ -96,12 +145,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/hilightBtn3"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="멋있는 가을, 여기서 시작"
-                app:layout_constraintStart_toEndOf="@id/verticalLeftGuideline"
-                app:layout_constraintTop_toBottomOf="@id/bar1"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
