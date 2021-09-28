@@ -49,6 +49,9 @@ android {
     }
 }
 
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
 dependencies {
 
     implementation files('libs/naveridlogin_android_sdk_4.2.6.aar')
