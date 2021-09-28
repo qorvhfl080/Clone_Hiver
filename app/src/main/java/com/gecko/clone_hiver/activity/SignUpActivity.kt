@@ -4,11 +4,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.databinding.ActivitySignUpBinding
+import com.nhn.android.naverlogin.OAuthLogin
 
 class SignUpActivity : BaseActivity() {
 
     val binding by lazy { ActivitySignUpBinding.inflate(layoutInflater) }
+
+    lateinit var mNaverLoginModule: OAuthLogin
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +58,13 @@ class SignUpActivity : BaseActivity() {
     override fun setValues() {
 
         setActionBar()
+
+        mNaverLoginModule = OAuthLogin.getInstance()
+        mNaverLoginModule.init(mContext,
+            getString(R.string.naver_client_id),
+            getString(R.string.naver_secret_key),
+            getString(R.string.naver_client_name)
+        )
 
     }
 
