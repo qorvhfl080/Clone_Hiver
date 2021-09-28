@@ -33,6 +33,7 @@ class BrandFragment : BaseFragment() {
         binding = FragmentBrandBinding.inflate(inflater, container, false)
 
         mSuareProductAdapter = ProductAdapter(requireContext(), mSuareProductList)
+        binding.suareRecyclerView.setHasFixedSize(true)
         binding.suareRecyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         binding.suareRecyclerView.adapter = mSuareProductAdapter
 

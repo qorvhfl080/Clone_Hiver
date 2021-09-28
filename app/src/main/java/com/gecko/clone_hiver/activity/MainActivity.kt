@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.adapters.viewpager.MainMenuViewPagerAdapter
 import com.gecko.clone_hiver.databinding.ActivityMainBinding
+import com.gecko.clone_hiver.datas.User
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -26,6 +27,8 @@ class MainActivity : BaseActivity() {
 
     lateinit var mainMenuViewPagerAdapter: MainMenuViewPagerAdapter
 
+    val mUserList = ArrayList<User>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -33,7 +36,7 @@ class MainActivity : BaseActivity() {
         setValues()
 
         val database = Firebase.database
-        val myRef = database.getReference("message")
+        val myRef = database.getReference("User")
 
         myRef.setValue("Hello World!")
 
@@ -41,10 +44,14 @@ class MainActivity : BaseActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val value = snapshot.getValue<String>()
                 Log.d("db", "${value}")
+                for (i in snapshot.children) {
+                    val p: User = i.getValue(User::class.java) as User
+                    // arrayList에 추가
+                }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Log.d("db", "Fail to read value", error.toException())
+                Log.e("db", "Fail to read value", error.toException())
             }
         })
 
@@ -105,6 +112,7 @@ class MainActivity : BaseActivity() {
     }
 
     fun keyHash() {
+        // fGxJ59CimPBbUDXCjYemxouMW+o=
         val info = packageManager.getPackageInfo(
             "com.gecko.clone_hiver",
             PackageManager.GET_SIGNATURES

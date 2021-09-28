@@ -9,6 +9,8 @@ class SignUpEmailActivity : BaseActivity() {
 
     val binding by lazy { ActivitySignUpEmailBinding.inflate(layoutInflater) }
 
+    var allChecked: Boolean = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -18,6 +20,28 @@ class SignUpEmailActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
+        binding.allCheckBox.setOnClickListener {
+            if (allChecked) {
+                allChecked = false
+                binding.over14YearsOldCheckBox.isChecked = true
+                binding.agreeHiverTermsCheckBox.isChecked = true
+                binding.essentialPersonalInfoCheckBox.isChecked = true
+                binding.optionalPersonalInfoCheckBox.isChecked = true
+                binding.eventMarketingCheckBox.isChecked = true
+                binding.nightAlarmCheckBox.isChecked = true
+
+            } else {
+                allChecked = true
+                binding.over14YearsOldCheckBox.isChecked = false
+                binding.agreeHiverTermsCheckBox.isChecked = false
+                binding.essentialPersonalInfoCheckBox.isChecked = false
+                binding.optionalPersonalInfoCheckBox.isChecked = false
+                binding.eventMarketingCheckBox.isChecked = false
+                binding.nightAlarmCheckBox.isChecked = false
+            }
+
+        }
 
     }
 
