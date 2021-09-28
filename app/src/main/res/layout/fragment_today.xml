@@ -46,8 +46,10 @@
             <ImageButton
                 android:id="@+id/hilightBtn1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher_round"
+                android:layout_height="150dp"
+                android:src="@drawable/highlight_1"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
                 app:layout_constraintStart_toEndOf="@id/verticalLeftGuideline"
                 app:layout_constraintEnd_toStartOf="@id/hilightBtn2"
                 app:layout_constraintTop_toBottomOf="@id/hilightTxt"/>
@@ -55,8 +57,10 @@
             <ImageButton
                 android:id="@+id/hilightBtn2"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher_round"
+                android:layout_height="150dp"
+                android:src="@drawable/highlight_2"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
                 app:layout_constraintEnd_toStartOf="@id/verticalRightGuideline"
                 app:layout_constraintStart_toEndOf="@id/hilightBtn1"
                 app:layout_constraintTop_toBottomOf="@id/hilightTxt"/>
@@ -64,8 +68,10 @@
             <ImageButton
                 android:id="@+id/hilightBtn3"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher_round"
+                android:layout_height="150dp"
+                android:src="@drawable/highlight_3"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
                 app:layout_constraintStart_toEndOf="@id/verticalLeftGuideline"
                 app:layout_constraintEnd_toStartOf="@id/hilightBtn4"
                 app:layout_constraintTop_toBottomOf="@id/hilightBtn1"/>
@@ -73,8 +79,10 @@
             <ImageButton
                 android:id="@+id/hilightBtn4"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher_round"
+                android:layout_height="150dp"
+                android:src="@drawable/highlight_4"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
                 app:layout_constraintEnd_toStartOf="@id/verticalRightGuideline"
                 app:layout_constraintStart_toEndOf="@id/hilightBtn3"
                 app:layout_constraintTop_toBottomOf="@id/hilightBtn2"/>

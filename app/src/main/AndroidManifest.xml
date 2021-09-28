@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Clone_Hiver">
         <activity
+            android:name=".activity.MySettingActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.MyActivity"
             android:exported="true" />
         <activity

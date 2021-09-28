@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.web.ServerAPI
 import com.gecko.clone_hiver.web.ServerAPIService
@@ -28,6 +29,7 @@ abstract class BaseActivity : AppCompatActivity() {
     lateinit var actionBarShoppingImg: ImageView
     lateinit var actionBarSettingImg: ImageView
     lateinit var actionBarProfileImg: ImageView
+    lateinit var actionBarLayout: ConstraintLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,6 +66,8 @@ abstract class BaseActivity : AppCompatActivity() {
         actionBarShoppingImg = defActionBar.customView.findViewById(R.id.actionShoppingImg)
         actionBarSettingImg = defActionBar.customView.findViewById(R.id.actionSettingImg)
         actionBarProfileImg = defActionBar.customView.findViewById(R.id.actionProfileImg)
+        actionBarLayout = defActionBar.customView.findViewById(R.id.actionBarLayout)
+
     }
 
 }

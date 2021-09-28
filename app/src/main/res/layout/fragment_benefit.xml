@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.BenefitFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/benefitCountTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전체 0건"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="@id/endedBtn"
+                app:layout_constraintBottom_toBottomOf="@id/endedBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/ongoingBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="진행중"
+                android:background="@drawable/select_box"
+                app:layout_constraintTop_toTopOf="@id/endedBtn"
+                app:layout_constraintEnd_toStartOf="@id/endedBtn"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"/>
+
+            <TextView
+                android:id="@+id/endedBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="종료"
+                android:background="@drawable/select_box"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"/>
+
+            <ListView
+                android:id="@+id/benefitListView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/endedBtn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

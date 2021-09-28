@@ -3,6 +3,7 @@ package com.gecko.clone_hiver.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.gecko.clone_hiver.databinding.ActivitySignUpBinding
 
 class SignUpActivity : BaseActivity() {
@@ -52,9 +53,11 @@ class SignUpActivity : BaseActivity() {
 
     override fun setValues() {
 
+        setActionBar()
+
     }
 
     override fun setActionBar() {
-
+        actionBarLayout.visibility = View.GONE
     }
 }

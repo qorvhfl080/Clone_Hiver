@@ -3,12 +3,11 @@ package com.gecko.clone_hiver.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.gecko.clone_hiver.R
-import com.gecko.clone_hiver.databinding.ActivitySignInBinding
+import com.gecko.clone_hiver.databinding.ActivityMySettingBinding
 
-class SignInActivity : BaseActivity() {
+class MySettingActivity : BaseActivity() {
 
-    val binding by lazy { ActivitySignInBinding.inflate(layoutInflater) }
+    val binding by lazy { ActivityMySettingBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,10 +24,12 @@ class SignInActivity : BaseActivity() {
     override fun setValues() {
 
         setActionBar()
-        
+
     }
 
     override fun setActionBar() {
         actionBarBackImg.visibility = View.VISIBLE
+        actionBarPageNameTxt.text = "설정"
+        actionBarPageNameTxt.visibility = View.VISIBLE
     }
 }

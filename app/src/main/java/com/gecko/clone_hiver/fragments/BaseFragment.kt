@@ -14,9 +14,15 @@ abstract class BaseFragment : Fragment() {
 //    private lateinit var retrofit: Retrofit
 //    lateinit var apiService: ServerAPIService
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mContext = requireContext()
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        mContext = requireContext()
+
+        //mContext = requireContext()
         //retrofit = ServerAPI.getRetrofit(mContext)
         //apiService = retrofit.create(ServerAPIService::class.java)
     }

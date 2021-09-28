@@ -2,6 +2,7 @@ package com.gecko.clone_hiver.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.gecko.clone_hiver.databinding.ActivitySignUpEmailBinding
 
 class SignUpEmailActivity : BaseActivity() {
@@ -22,9 +23,13 @@ class SignUpEmailActivity : BaseActivity() {
 
     override fun setValues() {
 
+        setActionBar()
+
     }
 
     override fun setActionBar() {
-
+        actionBarBackImg.visibility = View.VISIBLE
+        actionBarPageNameTxt.text = "회원가입"
+        actionBarPageNameTxt.visibility = View.VISIBLE
     }
 }
