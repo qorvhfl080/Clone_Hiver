@@ -1,14 +1,18 @@
 package com.gecko.clone_hiver.activity
 
 import android.content.Intent
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Base64
+import android.util.Log
 import android.view.View
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBar
 import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.adapters.viewpager.MainMenuViewPagerAdapter
 import com.gecko.clone_hiver.databinding.ActivityMainBinding
+import java.security.MessageDigest
 
 class MainActivity : BaseActivity() {
 
@@ -30,7 +34,10 @@ class MainActivity : BaseActivity() {
             when (item.itemId) {
 //                R.id.home -> {supportFragmentManager.beginTransaction().replace(R.id.linearLayout , HomeFragment()).commitAllowingStateLoss()}
 //                R.id.aiRecommend -> {}
-//                R.id.category -> {}
+                R.id.category -> {
+                    keyHash()
+                    return@setOnNavigationItemSelectedListener true
+                }
                 R.id.wishlist -> {
                     val myPageIntent = Intent(mContext, MyActivity::class.java)
                     startActivity(myPageIntent)
@@ -67,6 +74,16 @@ class MainActivity : BaseActivity() {
         binding.mainMenuTabLayout.setupWithViewPager(binding.mainMenuViewPager)
     }
 
-
+    fun keyHash() {
+        val info = packageManager.getPackageInfo(
+            "com.gecko.clone_hiver",
+            PackageManager.GET_SIGNATURES
+        )
+        for (signature in info.signatures) {
+            val md: MessageDigest = MessageDigest.getInstance("SHA")
+            md.update(signature.toByteArray())
+            Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT))
+        }
+    }
 
 }

@@ -4,9 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.databinding.ActivitySignUpBinding
 import com.nhn.android.naverlogin.OAuthLogin
+import com.nhn.android.naverlogin.OAuthLoginHandler
 
 class SignUpActivity : BaseActivity() {
 
@@ -29,6 +31,19 @@ class SignUpActivity : BaseActivity() {
         }
 
         binding.signUpNaverBtn.setOnClickListener {
+
+            mNaverLoginModule.startOauthLoginActivity(this, object : OAuthLoginHandler() {
+                override fun run(success: Boolean) {
+                    if (success) {
+
+                        val accessToken = mNaverLoginModule.getAccessToken(mContext)
+
+
+                    } else {
+                        Toast.makeText(mContext, "네이버 로그인 실패", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            })
 
         }
 
