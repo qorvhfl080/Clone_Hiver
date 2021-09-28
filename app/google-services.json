@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "20674090083",
+    "project_id": "clone-hiver",
+    "storage_bucket": "clone-hiver.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20674090083:android:3673f6f784acc5aa5a9456",
+        "android_client_info": {
+          "package_name": "com.gecko.clone_hiver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "20674090083-59f4sbu1bfsi8c198u3lqpd66gd4rls6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ8UuNvqmcww5uesnEfGZVx5Qai_5cEDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "20674090083-59f4sbu1bfsi8c198u3lqpd66gd4rls6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
