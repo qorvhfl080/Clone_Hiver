@@ -28,7 +28,7 @@ class MyCouponActivity : BaseActivity() {
     override fun setValues() {
 
         setActionBar()
-        setMainViewPager()
+        setCouponViewPager()
 
     }
 
@@ -38,7 +38,7 @@ class MyCouponActivity : BaseActivity() {
         actionBarPageNameTxt.visibility = View.VISIBLE
     }
 
-    fun setMainViewPager() {
+    fun setCouponViewPager() {
         couponMenuViewPagerAdapter = CouponMenuViewPagerAdapter(supportFragmentManager)
         binding.couponMenuViewPager.adapter = couponMenuViewPagerAdapter
         binding.couponMenuTabLayout.setupWithViewPager(binding.couponMenuViewPager)

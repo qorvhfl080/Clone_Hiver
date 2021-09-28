@@ -10,6 +10,14 @@ import android.widget.Toast
 import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.adapters.viewpager.MainMenuViewPagerAdapter
 import com.gecko.clone_hiver.databinding.ActivityMainBinding
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
+import com.google.firebase.database.ktx.getValue
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.ktx.initialize
 import java.security.MessageDigest
 
 class MainActivity : BaseActivity() {
@@ -23,6 +31,22 @@ class MainActivity : BaseActivity() {
         setContentView(binding.root)
         setupEvents()
         setValues()
+
+        val database = Firebase.database
+        val myRef = database.getReference("message")
+
+        myRef.setValue("Hello World!")
+
+        myRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val value = snapshot.getValue<String>()
+                Log.d("db", "${value}")
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.d("db", "Fail to read value", error.toException())
+            }
+        })
 
     }
 

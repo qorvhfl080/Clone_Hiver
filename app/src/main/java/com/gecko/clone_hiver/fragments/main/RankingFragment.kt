@@ -1,15 +1,12 @@
-package com.gecko.clone_hiver.fragments
+package com.gecko.clone_hiver.fragments.main
 
-import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.adapters.viewpager.RankingMenuViewPagerAdapter
-import com.gecko.clone_hiver.databinding.FragmentBrandBinding
 import com.gecko.clone_hiver.databinding.FragmentRankingBinding
+import com.gecko.clone_hiver.fragments.BaseFragment
 
 
 class RankingFragment : BaseFragment() {
@@ -20,8 +17,7 @@ class RankingFragment : BaseFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setupEvents()
-        setValues()
+
 
     }
 
@@ -31,7 +27,20 @@ class RankingFragment : BaseFragment() {
     ): View? {
         binding = FragmentRankingBinding.inflate(inflater, container, false)
 
+
+
         return binding.root
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupEvents()
+        setValues()
     }
 
     override fun setupEvents() {
@@ -45,7 +54,8 @@ class RankingFragment : BaseFragment() {
     }
 
     fun setRankingViewPager() {
-        rankingMenuViewPagerAdapter = RankingMenuViewPagerAdapter(requireActivity().supportFragmentManager)
+
+        rankingMenuViewPagerAdapter = RankingMenuViewPagerAdapter(childFragmentManager)
         binding.rankingMenuViewPager.adapter = rankingMenuViewPagerAdapter
         binding.rankingMenuTabLayout.setupWithViewPager(binding.rankingMenuViewPager)
     }

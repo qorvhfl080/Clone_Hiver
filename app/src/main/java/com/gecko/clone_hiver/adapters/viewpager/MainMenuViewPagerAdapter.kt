@@ -3,7 +3,7 @@ package com.gecko.clone_hiver.adapters.viewpager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.gecko.clone_hiver.fragments.*
+import com.gecko.clone_hiver.fragments.main.*
 
 class MainMenuViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
@@ -17,7 +17,7 @@ class MainMenuViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             3 -> BenefitFragment()
             4 -> BrandFragment()
             5 -> ShoppingMallFragment()
-            6 -> LuxaryFragment()
+            6 -> LuxuryFragment()
             7 -> SportFragment()
             8 -> DigitalFragment()
             else -> LifeFragment()
@@ -35,8 +35,7 @@ class MainMenuViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             6 -> "럭셔리"
             7 -> "스포츠"
             8 -> "디지털"
-            9 -> "라이프"
-            else -> ""
+            else -> "라이프"
         }
     }
 

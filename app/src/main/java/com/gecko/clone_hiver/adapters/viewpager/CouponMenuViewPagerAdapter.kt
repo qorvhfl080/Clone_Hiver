@@ -3,7 +3,8 @@ package com.gecko.clone_hiver.adapters.viewpager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.gecko.clone_hiver.fragments.*
+import com.gecko.clone_hiver.fragments.coupon.CouponAvailableFragment
+import com.gecko.clone_hiver.fragments.coupon.CouponExpiredFragment
 
 class CouponMenuViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 

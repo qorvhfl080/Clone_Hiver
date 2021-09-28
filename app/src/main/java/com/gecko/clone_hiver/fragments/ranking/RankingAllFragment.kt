@@ -1,12 +1,11 @@
-package com.gecko.clone_hiver.fragments
+package com.gecko.clone_hiver.fragments.ranking
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.databinding.FragmentRankingAllBinding
+import com.gecko.clone_hiver.fragments.BaseFragment
 
 class RankingAllFragment : BaseFragment() {
 

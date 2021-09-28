@@ -1,21 +1,19 @@
-package com.gecko.clone_hiver.fragments
+package com.gecko.clone_hiver.fragments.main
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.adapters.recycler.ProductAdapter
-import com.gecko.clone_hiver.databinding.FragmentBrandBinding
-import com.gecko.clone_hiver.databinding.FragmentShoppingMallBinding
+import com.gecko.clone_hiver.databinding.FragmentSportBinding
 import com.gecko.clone_hiver.datas.ProductData
+import com.gecko.clone_hiver.fragments.BaseFragment
 
 
-class ShoppingMallFragment : BaseFragment() {
+class SportFragment : BaseFragment() {
 
-    lateinit var binding: FragmentShoppingMallBinding
+    lateinit var binding: FragmentSportBinding
 
     val mSuareProductList = ArrayList<ProductData>()
 
@@ -32,7 +30,7 @@ class ShoppingMallFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentShoppingMallBinding.inflate(inflater, container, false)
+        binding = FragmentSportBinding.inflate(inflater, container, false)
 
         mSuareProductAdapter = ProductAdapter(requireContext(), mSuareProductList)
         binding.suareRecyclerView.layoutManager = GridLayoutManager(requireContext(), 2)

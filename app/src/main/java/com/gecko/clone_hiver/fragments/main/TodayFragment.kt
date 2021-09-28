@@ -1,4 +1,4 @@
-package com.gecko.clone_hiver.fragments
+package com.gecko.clone_hiver.fragments.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

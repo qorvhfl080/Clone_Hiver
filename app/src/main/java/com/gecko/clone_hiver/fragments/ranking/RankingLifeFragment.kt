@@ -1,17 +1,16 @@
-package com.gecko.clone_hiver.fragments
+package com.gecko.clone_hiver.fragments.ranking
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.gecko.clone_hiver.R
-import com.gecko.clone_hiver.databinding.FragmentCouponAvailableBinding
+import com.gecko.clone_hiver.databinding.FragmentRankingLifeBinding
+import com.gecko.clone_hiver.fragments.BaseFragment
 
 
-class CouponAvailableFragment : BaseFragment() {
+class RankingLifeFragment : BaseFragment() {
 
-    lateinit var binding: FragmentCouponAvailableBinding
+    lateinit var binding: FragmentRankingLifeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +23,7 @@ class CouponAvailableFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentCouponAvailableBinding.inflate(layoutInflater, container, false)
+        binding = FragmentRankingLifeBinding.inflate(inflater, container, false)
 
         return binding.root
     }

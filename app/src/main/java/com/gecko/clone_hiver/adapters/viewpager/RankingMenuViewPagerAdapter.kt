@@ -3,8 +3,7 @@ package com.gecko.clone_hiver.adapters.viewpager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.gecko.clone_hiver.fragments.RankingAllFragment
-import com.gecko.clone_hiver.fragments.RankingBrandFragment
+import com.gecko.clone_hiver.fragments.ranking.*
 
 class RankingMenuViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
@@ -14,12 +13,11 @@ class RankingMenuViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm
         return when (position) {
             0 -> RankingAllFragment()
             1 -> RankingBrandFragment()
-//            2 -> RankingShoppingMallFragment()
-//            3 -> RankingLuxaryFragment()
-//            4 -> RankingSportFragment()
-//            5 -> RankingDigitalFragment()
-//            else -> RankingLifeFragment()
-            else -> RankingAllFragment()
+            2 -> RankingShoppingMallFragment()
+            3 -> RankingLuxuryFragment()
+            4 -> RankingSportFragment()
+            5 -> RankingDigitalFragment()
+            else -> RankingLifeFragment()
         }
     }
 
@@ -31,8 +29,7 @@ class RankingMenuViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm
             3 -> "럭셔리"
             4 -> "스포츠"
             5 -> "디지털"
-            6 -> "라이프"
-            else -> ""
+            else -> "라이프"
         }
     }
 
