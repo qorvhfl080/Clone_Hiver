@@ -3,9 +3,7 @@ package com.gecko.clone_hiver.adapters.viewpager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.gecko.clone_hiver.fragments.BrandFragment
-import com.gecko.clone_hiver.fragments.TimeSaleragment
-import com.gecko.clone_hiver.fragments.TodayFragment
+import com.gecko.clone_hiver.fragments.*
 
 class MainMenuViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
@@ -14,9 +12,15 @@ class MainMenuViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> TodayFragment()
+            1 -> RankingFragment()
             2 -> TimeSaleragment()
+            3 -> BenefitFragment()
             4 -> BrandFragment()
-            else -> TodayFragment()
+            5 -> ShoppingMallFragment()
+            6 -> LuxaryFragment()
+            7 -> SportFragment()
+            8 -> DigitalFragment()
+            else -> LifeFragment()
         }
     }
 

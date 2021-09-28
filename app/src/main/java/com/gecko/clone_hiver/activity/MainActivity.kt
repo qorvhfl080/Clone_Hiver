@@ -2,13 +2,11 @@ package com.gecko.clone_hiver.activity
 
 import android.content.Intent
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Base64
 import android.util.Log
 import android.view.View
-import android.widget.Toolbar
-import androidx.appcompat.app.ActionBar
+import android.widget.Toast
 import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.adapters.viewpager.MainMenuViewPagerAdapter
 import com.gecko.clone_hiver.databinding.ActivityMainBinding
@@ -32,10 +30,18 @@ class MainActivity : BaseActivity() {
 
         binding.mainBottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-//                R.id.home -> {supportFragmentManager.beginTransaction().replace(R.id.linearLayout , HomeFragment()).commitAllowingStateLoss()}
-//                R.id.aiRecommend -> {}
+                R.id.home -> {
+                    val mainActivity = Intent(mContext, MainActivity::class.java)
+                    startActivity(mainActivity)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.aiRecommend -> {
+                    Toast.makeText(mContext, "액티비티 미생성됨", Toast.LENGTH_SHORT).show()
+                    return@setOnNavigationItemSelectedListener true
+                }
                 R.id.category -> {
                     keyHash()
+                    Toast.makeText(mContext, "액티비티 미생성됨", Toast.LENGTH_SHORT).show()
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.wishlist -> {
