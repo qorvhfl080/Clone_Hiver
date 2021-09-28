@@ -37,6 +37,7 @@
                 app:layout_constraintTop_toBottomOf="@id/bar1">
 
                 <TextView
+                    android:id="@+id/pointBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -49,6 +50,7 @@
                     android:paddingBottom="15dp"/>
 
                 <TextView
+                    android:id="@+id/couponBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -61,6 +63,7 @@
                     android:paddingBottom="15dp"/>
 
                 <TextView
+                    android:id="@+id/deliveryBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -118,6 +121,7 @@
                 android:layout_marginTop="10dp">
 
                 <TextView
+                    android:id="@+id/shoppingCartBtn"
                     android:drawableLeft="@drawable/shopping_icon"
                     android:drawablePadding="-80dp"
                     android:background="@drawable/gray_thin_box"
@@ -129,6 +133,7 @@
                     android:textColor="@color/black" />
 
                 <TextView
+                    android:id="@+id/inviteFriendBtn"
                     android:drawableLeft="@drawable/shopping_icon"
                     android:drawablePadding="-80dp"
                     android:background="@drawable/gray_thin_box"
@@ -140,6 +145,7 @@
                     android:textColor="@color/black" />
 
                 <TextView
+                    android:id="@+id/QnABtn"
                     android:drawableLeft="@drawable/shopping_icon"
                     android:drawablePadding="-80dp"
                     android:background="@drawable/gray_thin_box"
@@ -151,6 +157,7 @@
                     android:textColor="@color/black" />
 
                 <TextView
+                    android:id="@+id/myReviewBtn"
                     android:drawableLeft="@drawable/shopping_icon"
                     android:drawablePadding="-80dp"
                     android:background="@drawable/gray_thin_box"
@@ -162,6 +169,7 @@
                     android:textColor="@color/black" />
 
                 <TextView
+                    android:id="@+id/customerServiceBtn"
                     android:drawableLeft="@drawable/shopping_icon"
                     android:drawablePadding="-80dp"
                     android:background="@drawable/gray_thin_box"
@@ -173,6 +181,7 @@
                     android:textColor="@color/black" />
 
                 <TextView
+                    android:id="@+id/faqBtn"
                     android:drawableLeft="@drawable/shopping_icon"
                     android:drawablePadding="-80dp"
                     android:background="@drawable/gray_thin_box"

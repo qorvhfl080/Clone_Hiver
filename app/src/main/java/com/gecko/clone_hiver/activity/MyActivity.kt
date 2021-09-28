@@ -1,5 +1,6 @@
 package com.gecko.clone_hiver.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,6 +19,11 @@ class MyActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
+        actionBarSettingImg.setOnClickListener {
+            val settingIntent = Intent(mContext, MySettingActivity::class.java)
+            startActivity(settingIntent)
+        }
 
     }
 
