@@ -4,12 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.gecko.clone_hiver.databinding.ActivitySignUpEmailBinding
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class SignUpEmailActivity : BaseActivity() {
 
     val binding by lazy { ActivitySignUpEmailBinding.inflate(layoutInflater) }
 
     var allChecked: Boolean = true
+
+    val db = Firebase.database
+    val userRef = db.getReference("User")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +45,16 @@ class SignUpEmailActivity : BaseActivity() {
                 binding.eventMarketingCheckBox.isChecked = false
                 binding.nightAlarmCheckBox.isChecked = false
             }
+
+        }
+
+        binding.signUpSubmitBtn.setOnClickListener {
+            val id = binding.inputIdEdt.text.toString()
+            val pw = binding.inputPasswordEdt.text.toString()
+            val email = binding.inputEmailEdt.text.toString()
+            var phone = binding.phoneFirstEdt.text.toString()
+            phone += binding.phoneSecondEdt.text.toString()
+            phone += binding.phoneThirdEdt.text.toString()
 
         }
 
