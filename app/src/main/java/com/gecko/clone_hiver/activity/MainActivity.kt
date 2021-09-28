@@ -31,7 +31,11 @@ class MainActivity : BaseActivity() {
 //                R.id.home -> {supportFragmentManager.beginTransaction().replace(R.id.linearLayout , HomeFragment()).commitAllowingStateLoss()}
 //                R.id.aiRecommend -> {}
 //                R.id.category -> {}
-//                R.id.wishlist -> {}
+                R.id.wishlist -> {
+                    val myPageIntent = Intent(mContext, MyActivity::class.java)
+                    startActivity(myPageIntent)
+                    return@setOnNavigationItemSelectedListener true
+                }
                 R.id.user -> {
                     val signUpIntent = Intent(mContext, SignUpActivity::class.java)
                     startActivity(signUpIntent)
