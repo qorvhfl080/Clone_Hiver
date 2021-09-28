@@ -45,6 +45,14 @@ class SignUpActivity : BaseActivity() {
                             val url = "https://openapi.naver.com/v1/nid/me"
                             val jsonObj = JSONObject(mNaverLoginModule.requestApi(mContext, accessToken, url))
                             Log.d("naver", jsonObj.toString())
+
+                            val responseObj = jsonObj.getJSONObject("response")
+
+                            val uid = responseObj.getString("id")
+                            val name = responseObj.getString("name")
+
+                            // apiService.postRequestSocialLogin()
+
                         }.start()
 
 
