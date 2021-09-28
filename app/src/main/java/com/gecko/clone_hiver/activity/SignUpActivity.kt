@@ -3,12 +3,14 @@ package com.gecko.clone_hiver.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.databinding.ActivitySignUpBinding
 import com.nhn.android.naverlogin.OAuthLogin
 import com.nhn.android.naverlogin.OAuthLoginHandler
+import org.json.JSONObject
 
 class SignUpActivity : BaseActivity() {
 
@@ -37,6 +39,14 @@ class SignUpActivity : BaseActivity() {
                     if (success) {
 
                         val accessToken = mNaverLoginModule.getAccessToken(mContext)
+                        Log.d("token", "네이버토큰=${accessToken}")
+
+                        Thread {
+                            val url = "https://openapi.naver.com/v1/nid/me"
+                            val jsonObj = JSONObject(mNaverLoginModule.requestApi(mContext, accessToken, url))
+                            Log.d("naver", jsonObj.toString())
+                        }.start()
+
 
 
                     } else {
