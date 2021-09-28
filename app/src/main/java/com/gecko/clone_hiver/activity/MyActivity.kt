@@ -20,10 +20,7 @@ class MyActivity : BaseActivity() {
 
     override fun setupEvents() {
 
-        actionBarSettingImg.setOnClickListener {
-            val settingIntent = Intent(mContext, MySettingActivity::class.java)
-            startActivity(settingIntent)
-        }
+        setButtons()
 
     }
 
@@ -38,4 +35,27 @@ class MyActivity : BaseActivity() {
         actionBarIdTxt.visibility = View.VISIBLE
         actionBarSettingImg.visibility = View.VISIBLE
     }
+
+    fun setButtons() {
+
+        actionBarSettingImg.setOnClickListener {
+            val settingIntent = Intent(mContext, MySettingActivity::class.java)
+            startActivity(settingIntent)
+        }
+
+        binding.pointBtn.setOnClickListener {
+
+        }
+
+        binding.couponBtn.setOnClickListener {
+            val couponIntent = Intent(mContext, MyCouponActivity::class.java)
+            startActivity(couponIntent)
+        }
+
+        binding.deliveryBtn.setOnClickListener {
+
+        }
+
+    }
+
 }
