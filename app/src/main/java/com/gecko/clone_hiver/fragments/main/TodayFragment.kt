@@ -9,6 +9,7 @@ import com.gecko.clone_hiver.R
 import com.gecko.clone_hiver.adapters.viewpager.ViewPagerAdapter
 import com.gecko.clone_hiver.databinding.FragmentTodayBinding
 import com.gecko.clone_hiver.fragments.BaseFragment
+import com.gecko.clone_hiver.utils.FontChanger
 
 
 class TodayFragment : BaseFragment() {
@@ -35,6 +36,8 @@ class TodayFragment : BaseFragment() {
         super.onActivityCreated(savedInstanceState)
         setupEvents()
         setValues()
+
+        FontChanger.setGlobalFont(mContext, binding.root)
     }
 
     override fun setupEvents() {

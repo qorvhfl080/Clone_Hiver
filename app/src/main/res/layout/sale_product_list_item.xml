@@ -17,6 +17,16 @@
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"/>
 
+    <ImageView
+        android:id="@+id/productLikeBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/heart_icon"
+        app:layout_constraintEnd_toEndOf="@id/productImg"
+        app:layout_constraintBottom_toBottomOf="@id/productImg"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"/>
+
     <TextView
         android:id="@+id/brandTxt"
         android:layout_width="wrap_content"

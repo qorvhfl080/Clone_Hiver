@@ -3,6 +3,7 @@ package com.gecko.clone_hiver.fragments
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.gecko.clone_hiver.utils.FontChanger
 import com.gecko.clone_hiver.web.ServerAPI
 import com.gecko.clone_hiver.web.ServerAPIService
 import retrofit2.Retrofit
@@ -22,7 +23,7 @@ abstract class BaseFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        //mContext = requireContext()
+        FontChanger.setGlobalFont(mContext, requireView())
         //retrofit = ServerAPI.getRetrofit(mContext)
         //apiService = retrofit.create(ServerAPIService::class.java)
     }

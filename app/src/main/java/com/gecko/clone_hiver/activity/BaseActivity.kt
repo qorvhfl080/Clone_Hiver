@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.gecko.clone_hiver.R
+import com.gecko.clone_hiver.utils.FontChanger
 import com.gecko.clone_hiver.web.ServerAPI
 import com.gecko.clone_hiver.web.ServerAPIService
 import retrofit2.Retrofit
@@ -41,6 +42,13 @@ abstract class BaseActivity : AppCompatActivity() {
         supportActionBar?.let {
             setCustomActionBar()
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        val rootView = window.decorView.rootView
+        FontChanger.setGlobalFont(mContext, rootView)
     }
 
     abstract fun setupEvents()
