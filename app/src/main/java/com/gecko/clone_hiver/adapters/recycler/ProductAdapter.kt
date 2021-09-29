@@ -12,11 +12,14 @@ import com.gecko.clone_hiver.activity.ViewProductDetailActivity
 import com.gecko.clone_hiver.databinding.ProductListItemBinding
 import com.gecko.clone_hiver.databinding.SaleProductListItemBinding
 import com.gecko.clone_hiver.datas.ProductData
+import com.gecko.clone_hiver.utils.FontChanger
 
 class ProductAdapter(val mContext: Context, val mList: List<ProductData>) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val binding = SaleProductListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val view = LayoutInflater.from(mContext).inflate(R.layout.banner_list_item, parent, false)
+        FontChanger.setGlobalFont(mContext, view)
         return ProductViewHolder(binding).apply {
             itemView.setOnClickListener {
                 val toViewDetailIntent = Intent(mContext, ViewProductDetailActivity::class.java)
