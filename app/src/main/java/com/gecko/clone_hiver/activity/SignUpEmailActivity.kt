@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.gecko.clone_hiver.databinding.ActivitySignUpEmailBinding
 import com.gecko.clone_hiver.datas.User
-import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -60,9 +60,8 @@ class SignUpEmailActivity : BaseActivity() {
 
             val user = User(id, pw, email, phone)
 
-            database = Firebase.database.reference
-            database.child("User").setValue(user)
-
+            val addUserRef = FirebaseDatabase.getInstance().getReference("Users").push()
+            addUserRef.setValue(user)
 
         }
 
